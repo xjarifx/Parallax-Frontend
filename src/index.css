@@ -63,6 +63,7 @@ body,
 }
 
 .parallax__layer__0 img {
+  bottom: 112px;
   animation-delay: 480ms;
 }
 
@@ -71,6 +72,7 @@ body,
 }
 
 .parallax__layer__1 img {
+  bottom: 110px;
   animation-delay: 400ms;
 }
 
@@ -79,6 +81,7 @@ body,
 }
 
 .parallax__layer__2 img {
+  bottom: 108px;
   animation-delay: 320ms;
 }
 
@@ -87,6 +90,7 @@ body,
 }
 
 .parallax__layer__3 img {
+  bottom: 106px;
   animation-delay: 240ms;
 }
 
@@ -95,6 +99,7 @@ body,
 }
 
 .parallax__layer__4 img {
+  bottom: 104px;
   animation-delay: 160ms;
 }
 
@@ -103,6 +108,7 @@ body,
 }
 
 .parallax__layer__5 img {
+  bottom: 102px;
   animation-delay: 80ms;
 }
 
