@@ -31,7 +31,7 @@ export function SiteButton({
       }
     >
       <button
-        className={`text-fw-accent-text flex min-h-[42px] w-full cursor-pointer items-center justify-center gap-3 border-0 bg-[var(--site-button-color)] px-[14px] py-[10px] text-[clamp(0.9rem,1.1vw,1.05rem)] leading-none font-semibold [clip-path:polygon(0_0,100%_0,calc(100%-12px)_50%,100%_100%,0_100%,12px_50%)] ${buttonClassName ?? ""}`}
+        className={`text-fw-accent-text flex min-h-[36px] w-full cursor-pointer items-center justify-center gap-3 border-0 bg-[var(--site-button-color)] px-[14px] py-[7px] text-[clamp(0.82rem,1vw,0.96rem)] leading-none font-semibold [clip-path:polygon(0_0,100%_0,calc(100%-12px)_50%,100%_100%,0_100%,12px_50%)] ${buttonClassName ?? ""}`}
         type="button"
       >
         {iconSrc ? (

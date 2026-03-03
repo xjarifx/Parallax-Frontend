@@ -107,13 +107,13 @@ export function CoverContent() {
             label="SCREENS & TRAILERS"
             buttonColor="var(--color-fw-ribbon)"
             triangleColor="var(--color-fw-cover)"
-            buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.88rem,1.2vw,1.35rem)]"
+            buttonClassName="font-serif font-bold tracking-[0.16em]"
           />
           <SiteButton
             label="FIREWATCH FAQ"
             buttonColor="var(--color-fw-ribbon)"
             triangleColor="var(--color-fw-cover)"
-            buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.88rem,1.2vw,1.35rem)]"
+            buttonClassName="font-serif font-bold tracking-[0.16em]"
           />
         </div>
         <section
@@ -151,13 +151,13 @@ export function CoverContent() {
               label="TECH SUPPORT"
               buttonColor="var(--color-fw-ribbon)"
               triangleColor="var(--color-fw-cover)"
-              buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.82rem,1.05vw,1.15rem)]"
+              buttonClassName="font-serif font-bold tracking-[0.16em]"
             />
             <SiteButton
               label="STREAMING & LET'S PLAYS"
               buttonColor="var(--color-fw-ribbon)"
               triangleColor="var(--color-fw-cover)"
-              buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.82rem,1.05vw,1.15rem)]"
+              buttonClassName="font-serif font-bold tracking-[0.16em]"
             />
           </div>
 
