@@ -60,7 +60,7 @@ export function ParallaxScene() {
     <>
       <div className="absolute inset-0 [transform:translateZ(-350px)_scale(4.5)]">
         <img
-          className="absolute top-[15%] right-auto bottom-auto left-1/2 block w-[20.36%] max-w-none [transform:translateX(calc(-50%+(var(--mouse-x)*var(--logo-x-factor))))_translateY(calc(-50%+110vh))] animate-[logo-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--logo-x-factor:0.28] [animation-delay:620ms] motion-reduce:[transform:translateX(calc(-50%+(var(--mouse-x)*var(--logo-x-factor))))_translateY(-50%)] motion-reduce:animate-none"
+          className="absolute top-[30%] right-auto bottom-auto left-[50%] block w-[30%] max-w-none [transform:translateX(calc(-50%+(var(--mouse-x)*var(--logo-x-factor))))_translateY(calc(-50%+110vh))] animate-[logo-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--logo-x-factor:0.28] [animation-delay:620ms] motion-reduce:[transform:translateX(calc(-50%+(var(--mouse-x)*var(--logo-x-factor))))_translateY(-50%)] motion-reduce:animate-none"
           src={logo}
           alt=""
           aria-hidden="true"

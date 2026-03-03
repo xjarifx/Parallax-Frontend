@@ -21,6 +21,7 @@ const previews = [
 export function CoverContent() {
   return (
     <div className="bg-fw-cover absolute top-[calc(100%-105px)] right-0 left-0 z-[99] block h-[3000px] [transform:translate3d(0,110vh,1px)] animate-[cover-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] motion-reduce:[transform:translate3d(0,0,1px)] motion-reduce:animate-none">
+      <div className="mt-72"></div>
       <section
         className="text-fw-accent mx-auto mt-14 w-[min(92vw,900px)] text-center font-serif tracking-[0.16em] max-md:mt-10"
         aria-label="Available platforms"
