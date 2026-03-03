@@ -80,6 +80,7 @@ export default function App() {
       <div className="parallax__layer parallax__layer__6">
         <img src={layer6} alt="" aria-hidden="true" />
       </div>
+      {/* Content layer */}
       <div className="parallax__cover bg-[var(--cover-color)]">
         <section
           className="mx-auto mt-14 w-[min(92vw,900px)] text-center font-serif tracking-[0.16em] text-[var(--cover-accent)] max-md:mt-10"

@@ -29,10 +29,10 @@ body,
   overflow-y: auto;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   right: 0;
   bottom: 0;
-  margin-left: -1500px;
+  margin-left: 0;
 }
 
 .parallax__layer {
@@ -47,6 +47,9 @@ body,
   display: block;
   position: absolute;
   bottom: 100px;
+  left: -0.9%;
+  width: 101.8%;
+  max-width: none;
   --x-factor: 0;
   transform: translateX(calc(var(--mouse-x) * var(--x-factor)))
     translateY(110vh);
@@ -145,16 +148,17 @@ body,
 
 .parallax__layer__neg1 {
   transform: translateZ(-350px) scale(4.5);
+  width: 50%;
 }
 
 .parallax__logo {
   --logo-x-factor: 0.28;
   position: absolute;
-  top: 14%;
-  left: 48.2%;
+  top: 15%;
+  left: 150%;
+  right: auto;
   bottom: auto;
-  width: min(44vw, 660px);
-  height: auto;
+
   transform: translateX(calc(-50% + (var(--mouse-x) * var(--logo-x-factor))))
     translateY(calc(-50% + 110vh));
   animation: logo-enter 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -203,9 +207,6 @@ body,
 
 .parallax__layer__4 img {
   --x-factor: 0.72;
-  width: 100.5%;
-  max-width: none;
-  left: -0.25%;
   animation-delay: 160ms;
 }
 
@@ -215,9 +216,6 @@ body,
 
 .parallax__layer__5 img {
   --x-factor: 0.85;
-  width: 100.5%;
-  max-width: none;
-  left: -0.25%;
   animation-delay: 80ms;
 }
 
@@ -227,9 +225,6 @@ body,
 
 .parallax__layer__6 img {
   --x-factor: 1;
-  width: 100.8%;
-  max-width: none;
-  left: -0.4%;
   animation-delay: 0ms;
 }
 
