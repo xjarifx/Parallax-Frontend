@@ -40,6 +40,8 @@ body,
   display: block;
   position: absolute;
   bottom: 0;
+  transform: translateY(110vh);
+  animation: layer-enter 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .parallax__cover {
@@ -58,26 +60,71 @@ body,
   transform: translateZ(-300px) scale(4);
 }
 
+.parallax__layer__0 img {
+  animation-delay: 0ms;
+}
+
 .parallax__layer__1 {
   transform: translateZ(-250px) scale(3.5);
+}
+
+.parallax__layer__1 img {
+  animation-delay: 80ms;
 }
 
 .parallax__layer__2 {
   transform: translateZ(-200px) scale(3);
 }
 
+.parallax__layer__2 img {
+  animation-delay: 160ms;
+}
+
 .parallax__layer__3 {
   transform: translateZ(-150px) scale(2.5);
+}
+
+.parallax__layer__3 img {
+  animation-delay: 240ms;
 }
 
 .parallax__layer__4 {
   transform: translateZ(-100px) scale(2);
 }
 
+.parallax__layer__4 img {
+  animation-delay: 320ms;
+}
+
 .parallax__layer__5 {
   transform: translateZ(-50px) scale(1.5);
 }
 
+.parallax__layer__5 img {
+  animation-delay: 400ms;
+}
+
 .parallax__layer__6 {
   transform: translateZ(0px) scale(1);
+}
+
+.parallax__layer__6 img {
+  animation-delay: 480ms;
+}
+
+@keyframes layer-enter {
+  from {
+    transform: translateY(110vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax__layer img {
+    animation: none;
+    transform: translateY(0);
+  }
 }
