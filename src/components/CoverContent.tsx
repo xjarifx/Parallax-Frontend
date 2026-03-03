@@ -43,6 +43,7 @@ export function CoverContent() {
               iconSrc={platform.iconSrc}
               label={platform.label}
               buttonColor="var(--color-fw-accent)"
+              hoverColor="#ffffff"
               triangleColor="var(--color-fw-cover)"
               role="listitem"
             />
@@ -106,12 +107,14 @@ export function CoverContent() {
           <SiteButton
             label="SCREENS & TRAILERS"
             buttonColor="var(--color-fw-ribbon)"
+            hoverColor="var(--color-fw-accent)"
             triangleColor="var(--color-fw-cover)"
             buttonClassName="font-serif font-bold tracking-[0.16em]"
           />
           <SiteButton
             label="FIREWATCH FAQ"
             buttonColor="var(--color-fw-ribbon)"
+            hoverColor="var(--color-fw-accent)"
             triangleColor="var(--color-fw-cover)"
             buttonClassName="font-serif font-bold tracking-[0.16em]"
           />
@@ -150,12 +153,14 @@ export function CoverContent() {
             <SiteButton
               label="TECH SUPPORT"
               buttonColor="var(--color-fw-ribbon)"
+              hoverColor="var(--color-fw-accent)"
               triangleColor="var(--color-fw-cover)"
               buttonClassName="font-serif font-bold tracking-[0.16em]"
             />
             <SiteButton
               label="STREAMING & LET'S PLAYS"
               buttonColor="var(--color-fw-ribbon)"
+              hoverColor="var(--color-fw-accent)"
               triangleColor="var(--color-fw-cover)"
               buttonClassName="font-serif font-bold tracking-[0.16em]"
             />
