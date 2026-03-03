@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+import logo from "./assets/Firewatch.webp";
 import layer0 from "./assets/layer_0.png";
 import layer1 from "./assets/layer_1.png";
 import layer2 from "./assets/layer_2.png";
@@ -51,6 +52,9 @@ export default function App() {
 
   return (
     <div className="parallax" ref={parallaxRef}>
+      <div className="parallax__layer parallax__layer__neg1">
+        <img className="parallax__logo" src={logo} alt="" aria-hidden="true" />
+      </div>
       <div className="parallax__layer parallax__layer__0">
         <img src={layer0} alt="" aria-hidden="true" />
       </div>
