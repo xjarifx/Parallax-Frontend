@@ -16,6 +16,15 @@ import preview4 from "./assets/game_preview/firewatch_150305_06.png";
 export default function App() {
   const parallaxRef = useRef<HTMLDivElement>(null);
 
+  const layerImageBaseClass =
+    "absolute bottom-[100px] left-[-0.9%] block w-[101.8%] max-w-none [transform:translateX(calc(var(--mouse-x)*var(--x-factor)))_translateY(110vh)] motion-reduce:animate-none motion-reduce:[transform:translateX(calc(var(--mouse-x)*var(--x-factor)))_translateY(0)]";
+
+  const coverPillClass =
+    "relative flex min-h-[42px] items-center justify-center gap-3 bg-fw-accent px-[14px] py-[10px] text-[clamp(0.9rem,1.1vw,1.05rem)] leading-none font-semibold text-fw-accent-text before:absolute before:top-0 before:left-[-12px] before:h-0 before:w-0 before:border-y-[21px] before:border-y-transparent before:border-r-[12px] before:border-r-fw-accent after:absolute after:top-0 after:right-[-12px] after:h-0 after:w-0 after:border-y-[21px] after:border-y-transparent after:border-l-[12px] after:border-l-fw-accent";
+
+  const ribbonButtonClass =
+    "relative min-h-9 cursor-pointer border-0 bg-fw-ribbon px-4 py-[7px] font-serif text-fw-accent-text leading-none font-bold tracking-[0.16em] before:absolute before:top-0 before:left-[-12px] before:h-0 before:w-0 before:border-y-[18px] before:border-y-transparent before:border-r-[12px] before:border-r-fw-ribbon after:absolute after:top-0 after:right-[-12px] after:h-0 after:w-0 after:border-y-[18px] after:border-y-transparent after:border-l-[12px] after:border-l-fw-ribbon";
+
   useEffect(() => {
     const element = parallaxRef.current;
 
@@ -55,35 +64,77 @@ export default function App() {
   }, []);
 
   return (
-    <div className="parallax" ref={parallaxRef}>
-      <div className="parallax__layer parallax__layer__neg1">
-        <img className="parallax__logo" src={logo} alt="" aria-hidden="true" />
+    <div
+      className="absolute inset-0 isolate h-screen overflow-x-hidden overflow-y-auto [--mouse-x:0px] [perspective:100px] [transform-style:preserve-3d]"
+      ref={parallaxRef}
+    >
+      <div className="absolute inset-0 [transform:translateZ(-350px)_scale(4.5)]">
+        <img
+          className="absolute top-[15%] right-auto bottom-auto left-1/2 block w-[20.36%] max-w-none [transform:translateX(calc(-50%+(var(--mouse-x)*var(--logo-x-factor))))_translateY(calc(-50%+110vh))] animate-[logo-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--logo-x-factor:0.28] [animation-delay:620ms] motion-reduce:[transform:translateX(calc(-50%+(var(--mouse-x)*var(--logo-x-factor))))_translateY(-50%)] motion-reduce:animate-none"
+          src={logo}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      <div className="parallax__layer parallax__layer__0">
-        <img src={layer0} alt="" aria-hidden="true" />
+      <div className="absolute inset-0 [transform:translateZ(-300px)_scale(4)]">
+        <img
+          className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--x-factor:0.25] [animation-delay:480ms]`}
+          src={layer0}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      <div className="parallax__layer parallax__layer__1">
-        <img src={layer1} alt="" aria-hidden="true" />
+      <div className="absolute inset-0 [transform:translateZ(-250px)_scale(3.5)]">
+        <img
+          className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--x-factor:0.35] [animation-delay:400ms]`}
+          src={layer1}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      <div className="parallax__layer parallax__layer__2">
-        <img src={layer2} alt="" aria-hidden="true" />
+      <div className="absolute inset-0 [transform:translateZ(-200px)_scale(3)]">
+        <img
+          className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--x-factor:0.45] [animation-delay:320ms]`}
+          src={layer2}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      <div className="parallax__layer parallax__layer__3">
-        <img src={layer3} alt="" aria-hidden="true" />
+      <div className="absolute inset-0 [transform:translateZ(-150px)_scale(2.5)]">
+        <img
+          className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--x-factor:0.6] [animation-delay:240ms]`}
+          src={layer3}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      <div className="parallax__layer parallax__layer__4">
-        <img src={layer4} alt="" aria-hidden="true" />
+      <div className="absolute inset-0 [transform:translateZ(-100px)_scale(2)]">
+        <img
+          className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--x-factor:0.72] [animation-delay:160ms]`}
+          src={layer4}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      <div className="parallax__layer parallax__layer__5">
-        <img src={layer5} alt="" aria-hidden="true" />
+      <div className="absolute inset-0 [transform:translateZ(-50px)_scale(1.5)]">
+        <img
+          className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--x-factor:0.85] [animation-delay:80ms]`}
+          src={layer5}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      <div className="parallax__layer parallax__layer__6">
-        <img src={layer6} alt="" aria-hidden="true" />
+      <div className="absolute inset-0 [transform:translateZ(0px)_scale(1)]">
+        <img
+          className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] [--x-factor:1] [animation-delay:0ms]`}
+          src={layer6}
+          alt=""
+          aria-hidden="true"
+        />
       </div>
-      {/* Content layer */}
-      <div className="parallax__cover bg-[var(--cover-color)]">
+      <div className="bg-fw-cover absolute top-[calc(100%-105px)] right-0 left-0 z-[99] block h-[3000px] [transform:translate3d(0,110vh,1px)] animate-[cover-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] motion-reduce:[transform:translate3d(0,0,1px)] motion-reduce:animate-none">
         <section
-          className="mx-auto mt-14 w-[min(92vw,900px)] text-center font-serif tracking-[0.16em] text-[var(--cover-accent)] max-md:mt-10"
+          className="text-fw-accent mx-auto mt-14 w-[min(92vw,900px)] text-center font-serif tracking-[0.16em] max-md:mt-10"
           aria-label="Available platforms"
         >
           <h2 className="m-0 text-[clamp(1.2rem,2vw,1.8rem)] font-medium">
@@ -93,19 +144,19 @@ export default function App() {
             className="mt-[34px] grid grid-cols-2 gap-x-[42px] gap-y-[26px] max-md:grid-cols-1 max-md:gap-[18px]"
             role="list"
           >
-            <div className="cover-pill-item" role="listitem">
+            <div className={coverPillClass} role="listitem">
               <span aria-hidden="true">🖥️</span>
               <span>WINDOWS MAC LINUX</span>
             </div>
-            <div className="cover-pill-item" role="listitem">
+            <div className={coverPillClass} role="listitem">
               <span aria-hidden="true">🎮</span>
               <span>NINTENDO SWITCH</span>
             </div>
-            <div className="cover-pill-item" role="listitem">
+            <div className={coverPillClass} role="listitem">
               <span aria-hidden="true">🎮</span>
               <span>PLAYSTATION 4</span>
             </div>
-            <div className="cover-pill-item" role="listitem">
+            <div className={coverPillClass} role="listitem">
               <span aria-hidden="true">🎮</span>
               <span>XBOX ONE</span>
             </div>
@@ -122,7 +173,7 @@ export default function App() {
             />
           </div>
           <section
-            className="mt-16 text-left tracking-[0.01em] text-[var(--cover-accent)] max-md:mt-[42px]"
+            className="text-fw-accent mt-16 text-left tracking-[0.01em] max-md:mt-[42px]"
             aria-label="About Firewatch"
           >
             <p className="m-0 text-[clamp(1.3rem,3.2vw,2.7rem)] leading-[1.25] font-bold">
@@ -166,13 +217,13 @@ export default function App() {
             aria-label="Additional links"
           >
             <button
-              className="cover-ribbon-btn text-[clamp(0.88rem,1.2vw,1.35rem)]"
+              className={`${ribbonButtonClass} text-[clamp(0.88rem,1.2vw,1.35rem)]`}
               type="button"
             >
               SCREENS &amp; TRAILERS
             </button>
             <button
-              className="cover-ribbon-btn text-[clamp(0.88rem,1.2vw,1.35rem)]"
+              className={`${ribbonButtonClass} text-[clamp(0.88rem,1.2vw,1.35rem)]`}
               type="button"
             >
               FIREWATCH FAQ
@@ -204,7 +255,7 @@ export default function App() {
             />
           </section>
           <section
-            className="mt-14 text-center text-[var(--cover-accent)] max-md:mt-9"
+            className="text-fw-accent mt-14 text-center max-md:mt-9"
             aria-label="Additional game information"
           >
             <blockquote className="m-0 text-[clamp(1.25rem,3.1vw,2.9rem)] leading-[1.18] font-medium tracking-[0.06em] max-md:leading-[1.25]">
@@ -212,7 +263,7 @@ export default function App() {
               <br />
               AS ITS UNIQUE PREMISE.”
             </blockquote>
-            <p className="mt-[26px] mb-0 text-[clamp(0.86rem,1.4vw,1.5rem)] font-semibold tracking-[0.18em] text-[#bb5a18] max-md:mt-4 max-md:tracking-[0.12em]">
+            <p className="text-fw-ribbon mt-[26px] mb-0 text-[clamp(0.86rem,1.4vw,1.5rem)] font-semibold tracking-[0.18em] max-md:mt-4 max-md:tracking-[0.12em]">
               ENTERTAINMENT WEEKLY
             </p>
 
@@ -222,19 +273,19 @@ export default function App() {
               aria-label="Resources"
             >
               <button
-                className="cover-ribbon-btn text-[clamp(0.82rem,1.05vw,1.15rem)]"
+                className={`${ribbonButtonClass} text-[clamp(0.82rem,1.05vw,1.15rem)]`}
                 type="button"
               >
                 TECH SUPPORT
               </button>
               <span
-                className="cover-footer-mark-shape mx-auto grid h-[74px] w-[62px] place-items-center border-[6px] border-[#bb5a18] text-[2rem] leading-none text-[#bb5a18] max-md:my-1"
+                className="border-fw-ribbon text-fw-ribbon mx-auto grid h-[74px] w-[62px] place-items-center [border-radius:26px_26px_34px_34px] border-[6px] text-[2rem] leading-none [clip-path:polygon(50%_0%,100%_12%,88%_78%,50%_100%,12%_78%,0%_12%)] max-md:my-1"
                 aria-hidden="true"
               >
                 ▲
               </span>
               <button
-                className="cover-ribbon-btn text-[clamp(0.82rem,1.05vw,1.15rem)]"
+                className={`${ribbonButtonClass} text-[clamp(0.82rem,1.05vw,1.15rem)]`}
                 type="button"
               >
                 STREAMING &amp; LET&apos;S PLAYS
@@ -245,7 +296,7 @@ export default function App() {
               日本語に関する情報
             </p>
 
-            <p className="mx-auto mt-[52px] mb-0 max-w-[760px] text-[clamp(0.7rem,1vw,1.05rem)] leading-[1.45] tracking-[0.12em] text-[#bb5a18] max-md:mt-7 max-md:tracking-[0.08em]">
+            <p className="text-fw-ribbon mx-auto mt-[52px] mb-0 max-w-[760px] text-[clamp(0.7rem,1vw,1.05rem)] leading-[1.45] tracking-[0.12em] max-md:mt-7 max-md:tracking-[0.08em]">
               ©2026 CAMPO SANTO, IN COOPERATION WITH PANIC.
               <br />
               FIREWATCH IS A TRADEMARK OF CAMPO SANTO.
@@ -254,7 +305,7 @@ export default function App() {
             </p>
 
             <div
-              className="mt-[72px] mb-14 flex justify-center gap-[66px] text-[clamp(1rem,2.1vw,2.2rem)] font-bold tracking-[0.04em] text-[#bb5a18] max-md:mt-[38px] max-md:mb-7 max-md:gap-6"
+              className="text-fw-ribbon mt-[72px] mb-14 flex justify-center gap-[66px] text-[clamp(1rem,2.1vw,2.2rem)] font-bold tracking-[0.04em] max-md:mt-[38px] max-md:mb-7 max-md:gap-6"
               aria-hidden="true"
             >
               <span>CAMPO SANTO</span>
