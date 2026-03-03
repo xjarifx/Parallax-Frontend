@@ -2,13 +2,18 @@ import preview1 from "../assets/game_preview/firewatch-2.jpg";
 import preview2 from "../assets/game_preview/firewatch-e3-2.jpg";
 import preview3 from "../assets/game_preview/firewatch-e3-5.jpg";
 import preview4 from "../assets/game_preview/firewatch_150305_06.png";
-import { coverPillClass, ribbonButtonClass } from "./styles";
+import imacIcon from "../assets/platform_icons/imac.png";
+import nintendoSwitchIcon from "../assets/platform_icons/nintendo-switch.png";
+import playstationIcon from "../assets/platform_icons/playstation-logotype.png";
+import xboxIcon from "../assets/platform_icons/xbox-logo.png";
+import { SiteButton } from "./SiteButton";
+import { ribbonButtonClass } from "./styles";
 
 const platforms = [
-  { icon: "🖥️", label: "WINDOWS MAC LINUX" },
-  { icon: "🎮", label: "NINTENDO SWITCH" },
-  { icon: "🎮", label: "PLAYSTATION 4" },
-  { icon: "🎮", label: "XBOX ONE" },
+  { iconSrc: imacIcon, label: "WINDOWS MAC LINUX" },
+  { iconSrc: nintendoSwitchIcon, label: "NINTENDO SWITCH" },
+  { iconSrc: playstationIcon, label: "PLAYSTATION 4" },
+  { iconSrc: xboxIcon, label: "XBOX ONE" },
 ] as const;
 
 const previews = [
@@ -34,14 +39,13 @@ export function CoverContent() {
           role="list"
         >
           {platforms.map((platform) => (
-            <div
-              className={coverPillClass}
-              role="listitem"
+            <SiteButton
               key={platform.label}
-            >
-              <span aria-hidden="true">{platform.icon}</span>
-              <span>{platform.label}</span>
-            </div>
+              iconSrc={platform.iconSrc}
+              label={platform.label}
+              buttonColor="var(--color-fw-accent)"
+              triangleColor="var(--color-fw-cover)"
+            />
           ))}
         </div>
         <div className="mt-11">
