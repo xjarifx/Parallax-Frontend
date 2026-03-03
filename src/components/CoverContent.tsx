@@ -7,7 +7,6 @@ import nintendoSwitchIcon from "../assets/platform_icons/nintendo-switch.png";
 import playstationIcon from "../assets/platform_icons/playstation-logotype.png";
 import xboxIcon from "../assets/platform_icons/xbox-logo.png";
 import { SiteButton } from "./SiteButton";
-import { ribbonButtonClass } from "./styles";
 
 const platforms = [
   { iconSrc: imacIcon, label: "WINDOWS MAC LINUX" },
@@ -25,7 +24,7 @@ const previews = [
 
 export function CoverContent() {
   return (
-    <div className="bg-fw-cover absolute top-[calc(100%-105px)] right-0 left-0 z-[99] block h-[3000px] [transform:translate3d(0,110vh,1px)] animate-[cover-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] motion-reduce:[transform:translate3d(0,0,1px)] motion-reduce:animate-none">
+    <div className="bg-fw-cover absolute top-[calc(100%-105px)] right-0 left-0 z-[99] block min-h-screen [transform:translate3d(0,110vh,1px)] animate-[cover-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards] pb-14 motion-reduce:[transform:translate3d(0,0,1px)] motion-reduce:animate-none">
       <div className="mt-72"></div>
       <section
         className="text-fw-accent mx-auto mt-14 w-[min(92vw,900px)] text-center font-serif tracking-[0.16em] max-md:mt-10"
@@ -45,6 +44,7 @@ export function CoverContent() {
               label={platform.label}
               buttonColor="var(--color-fw-accent)"
               triangleColor="var(--color-fw-cover)"
+              role="listitem"
             />
           ))}
         </div>
@@ -103,18 +103,18 @@ export function CoverContent() {
           role="group"
           aria-label="Additional links"
         >
-          <button
-            className={`${ribbonButtonClass} text-[clamp(0.88rem,1.2vw,1.35rem)]`}
-            type="button"
-          >
-            SCREENS &amp; TRAILERS
-          </button>
-          <button
-            className={`${ribbonButtonClass} text-[clamp(0.88rem,1.2vw,1.35rem)]`}
-            type="button"
-          >
-            FIREWATCH FAQ
-          </button>
+          <SiteButton
+            label="SCREENS & TRAILERS"
+            buttonColor="var(--color-fw-ribbon)"
+            triangleColor="var(--color-fw-cover)"
+            buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.88rem,1.2vw,1.35rem)]"
+          />
+          <SiteButton
+            label="FIREWATCH FAQ"
+            buttonColor="var(--color-fw-ribbon)"
+            triangleColor="var(--color-fw-cover)"
+            buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.88rem,1.2vw,1.35rem)]"
+          />
         </div>
         <section
           className="mt-[34px] mb-11 grid grid-cols-2 gap-x-12 gap-y-10 max-md:mt-6 max-md:mb-[30px] max-md:grid-cols-1 max-md:gap-[18px]"
@@ -143,28 +143,22 @@ export function CoverContent() {
           </p>
 
           <div
-            className="mt-[62px] grid grid-cols-[1fr_auto_1fr] items-center gap-[18px] max-md:mt-[30px] max-md:grid-cols-1 max-md:gap-4"
+            className="mt-[62px] mb-0 flex justify-center gap-12 max-md:mt-[34px] max-md:gap-5"
             role="group"
             aria-label="Resources"
           >
-            <button
-              className={`${ribbonButtonClass} text-[clamp(0.82rem,1.05vw,1.15rem)]`}
-              type="button"
-            >
-              TECH SUPPORT
-            </button>
-            <span
-              className="border-fw-ribbon text-fw-ribbon mx-auto grid h-[74px] w-[62px] place-items-center [border-radius:26px_26px_34px_34px] border-[6px] text-[2rem] leading-none [clip-path:polygon(50%_0%,100%_12%,88%_78%,50%_100%,12%_78%,0%_12%)] max-md:my-1"
-              aria-hidden="true"
-            >
-              ▲
-            </span>
-            <button
-              className={`${ribbonButtonClass} text-[clamp(0.82rem,1.05vw,1.15rem)]`}
-              type="button"
-            >
-              STREAMING &amp; LET&apos;S PLAYS
-            </button>
+            <SiteButton
+              label="TECH SUPPORT"
+              buttonColor="var(--color-fw-ribbon)"
+              triangleColor="var(--color-fw-cover)"
+              buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.82rem,1.05vw,1.15rem)]"
+            />
+            <SiteButton
+              label="STREAMING & LET'S PLAYS"
+              buttonColor="var(--color-fw-ribbon)"
+              triangleColor="var(--color-fw-cover)"
+              buttonClassName="font-serif font-bold tracking-[0.16em] text-[clamp(0.82rem,1.05vw,1.15rem)]"
+            />
           </div>
 
           <p className="mt-14 mb-0 text-[clamp(1.25rem,2.4vw,2.6rem)] font-bold tracking-[0.04em] max-md:mt-[30px]">
