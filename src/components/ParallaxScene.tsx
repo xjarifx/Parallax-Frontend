@@ -1,13 +1,13 @@
 import type { CSSProperties } from "react";
 
-import logo from "../assets/Firewatch.webp";
-import layer0 from "../assets/layer_0.png";
-import layer1 from "../assets/layer_1.png";
-import layer2 from "../assets/layer_2.png";
-import layer3 from "../assets/layer_3.png";
-import layer4 from "../assets/layer_4.png";
-import layer5 from "../assets/layer_5.png";
-import layer6 from "../assets/layer_6.png";
+import logo from "../assets/brand_logo/Firewatch.webp";
+import layer0 from "../assets/layers/layer_0.png";
+import layer1 from "../assets/layers/layer_1.png";
+import layer2 from "../assets/layers/layer_2.png";
+import layer3 from "../assets/layers/layer_3.png";
+import layer4 from "../assets/layers/layer_4.png";
+import layer5 from "../assets/layers/layer_5.png";
+import layer6 from "../assets/layers/layer_6.png";
 import { layerImageBaseClass } from "./styles";
 
 const layerConfigs = [
