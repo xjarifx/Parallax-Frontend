@@ -46,6 +46,7 @@ export function CoverContent() {
               hoverColor="#ffffff"
               triangleColor="var(--color-fw-cover)"
               role="listitem"
+              href="/coming-soon"
             />
           ))}
         </div>
@@ -110,6 +111,7 @@ export function CoverContent() {
             hoverColor="var(--color-fw-accent)"
             triangleColor="var(--color-fw-cover)"
             buttonClassName="font-serif font-bold tracking-[0.16em]"
+            href="/coming-soon"
           />
           <SiteButton
             label="FIREWATCH FAQ"
@@ -117,6 +119,7 @@ export function CoverContent() {
             hoverColor="var(--color-fw-accent)"
             triangleColor="var(--color-fw-cover)"
             buttonClassName="font-serif font-bold tracking-[0.16em]"
+            href="/coming-soon"
           />
         </div>
         <section
@@ -156,6 +159,7 @@ export function CoverContent() {
               hoverColor="var(--color-fw-accent)"
               triangleColor="var(--color-fw-cover)"
               buttonClassName="font-serif font-bold tracking-[0.16em]"
+              href="/coming-soon"
             />
             <SiteButton
               label="STREAMING & LET'S PLAYS"
@@ -163,6 +167,7 @@ export function CoverContent() {
               hoverColor="var(--color-fw-accent)"
               triangleColor="var(--color-fw-cover)"
               buttonClassName="font-serif font-bold tracking-[0.16em]"
+              href="/coming-soon"
             />
           </div>
 
