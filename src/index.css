@@ -21,6 +21,14 @@
     background: linear-gradient(to bottom, #fedcc8 0 95%, #2d112b 95% 100%);
   }
 
+  @media (max-width: 1024px) {
+    html,
+    body,
+    #root {
+      background: url('/src/assets/background/3134682.png') center/cover no-repeat;
+    }
+  }
+
   html {
     font-size: 14px;
   }

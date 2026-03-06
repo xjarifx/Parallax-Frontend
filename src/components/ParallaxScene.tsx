@@ -68,7 +68,7 @@ export function ParallaxScene() {
       </div>
 
       {layerConfigs.map((layer) => (
-        <div className={`absolute inset-0 ${layer.depthClass}`} key={layer.src}>
+        <div className={`absolute inset-0 ${layer.depthClass} max-lg:hidden`} key={layer.src}>
           <img
             className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards]`}
             style={
