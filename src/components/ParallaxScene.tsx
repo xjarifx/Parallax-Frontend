@@ -55,6 +55,8 @@ const layerConfigs = [
   },
 ] as const;
 
+import { CoverContent } from "./CoverContent";
+
 export function ParallaxScene() {
   return (
     <>
@@ -67,8 +69,11 @@ export function ParallaxScene() {
         />
       </div>
 
-      {layerConfigs.map((layer) => (
-        <div className={`absolute inset-0 ${layer.depthClass} max-lg:hidden`} key={layer.src}>
+      {layerConfigs.map((layer, idx) => (
+        <div
+          className={`absolute inset-0 ${layer.depthClass} max-lg:hidden`}
+          key={layer.src}
+        >
           <img
             className={`${layerImageBaseClass} animate-[layer-enter_900ms_cubic-bezier(0.22,1,0.36,1)_forwards]`}
             style={
@@ -83,6 +88,8 @@ export function ParallaxScene() {
           />
         </div>
       ))}
+
+      <CoverContent />
     </>
   );
 }

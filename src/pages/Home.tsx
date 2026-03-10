@@ -1,4 +1,3 @@
-import { CoverContent } from "../components/CoverContent";
 import { ParallaxScene } from "../components/ParallaxScene";
 import { useParallaxMouse } from "../hooks/useParallaxMouse";
 
@@ -11,7 +10,6 @@ export function Home() {
       ref={parallaxRef}
     >
       <ParallaxScene />
-      <CoverContent />
     </div>
   );
 }
