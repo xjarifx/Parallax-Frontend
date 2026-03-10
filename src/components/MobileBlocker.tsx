@@ -1,5 +1,3 @@
-import React from "react";
-
 const MobileBlocker = () => (
   <div className="bg-fw-cover fixed inset-0 z-[999] flex items-center justify-center">
     <div className="px-6 text-center">
